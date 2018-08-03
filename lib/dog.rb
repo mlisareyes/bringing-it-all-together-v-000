@@ -55,6 +55,8 @@ class Dog
     end.first
   end
 
+  def self.find_or_create_by
+
   def self.new_from_db(row)
     id = row[0]
     name = row[1]
