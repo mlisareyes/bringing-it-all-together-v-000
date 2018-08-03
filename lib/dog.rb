@@ -50,6 +50,7 @@ class Dog
     data = self.db_exec(sql, id)[0]
     if data
       self.new_from_db(data)
+    end
   end
 
 end
