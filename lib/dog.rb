@@ -43,5 +43,13 @@ class Dog
   end
 
   def self.find_by_id
+    sql = <<-SQL
+      SELECT * FROM dogs WHERE id = ?;
+    SQL
+
+    data = self.db_exec(sql, id)[0]
+    if data
+      self.new_from_db(data)
+  end
 
 end
