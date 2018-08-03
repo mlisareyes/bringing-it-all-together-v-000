@@ -6,4 +6,7 @@ class Dog
     attr.each {|k,v| self.send(("#{k}="), v)}
     @id = id
   end
+
+  def self.create_table
+  end
 end
